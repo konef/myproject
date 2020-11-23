@@ -1,0 +1,5 @@
+#find -XX:MaxPermSize=128m and replce on -XX:MaxPermSize=512m
+#in all uats from uat2 to uat6
+
+
+for I in {2..6}; do sed -i 's/-XX:MaxPermSize=128m/-XX:MaxPermSize=512m/g' /app/atg_uat$I/ATG10.2/home/bin/dynamoEnv.sh ; done
